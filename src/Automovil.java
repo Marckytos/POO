@@ -64,4 +64,14 @@ public class Automovil{
     public void setColor(Color color) {
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "Automovil{" +
+                "marca='" + marca + '\'' +
+                ", subMarca='" + subMarca + '\'' +
+                ", modelo=" + modelo +
+                ", color=" + color +
+                '}';
+    }
 }
