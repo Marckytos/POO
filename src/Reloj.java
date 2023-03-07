@@ -11,6 +11,12 @@ public class Reloj {
     public Reloj() {
     }
 
+    public Reloj(int hora, int minuto, int segundo) {
+        this.hora = (hora>=0 && hora <= 23) ? hora : 0;
+        this.minuto = (minuto>=0 && minuto <= 59) ? minuto : 0;
+        this.segundo = (segundo>=0 && segundo <= 59) ? segundo : 0;
+    }
+
     public Reloj(int hora, int minuto, int segundo, int horaAlarma, int minutoAlarma, int segundoAlarma, String marca, String tipo) {
         this.hora = hora;
         this.minuto = minuto;
@@ -102,6 +108,7 @@ public class Reloj {
     public void avanzar(){
 
         this.segundo++;
+
         if(this.segundo >= 60){
             this.segundo=0;
 
@@ -124,6 +131,15 @@ public class Reloj {
         this.horaAlarma=h;
         this.minutoAlarma=m;
         this.segundoAlarma=s;
+        if(this.hora==this.horaAlarma &&
+                this.minuto==this.minutoAlarma &&
+                this.segundo==this.segundoAlarma){
+
+            System.out.println("ALARMAAAA!!!!");
+            System.out.println("ALARMAAAA!!!!");
+            System.out.println("ALARMAAAA!!!!");
+
+        }
 
     }
 }
