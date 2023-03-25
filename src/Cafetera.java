@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Cafetera {
 
     private int agua;
@@ -119,8 +121,15 @@ public class Cafetera {
     //Para hacer los dif cafes
 
     public void hacerCafe(String tipo) {
+        Scanner entradanum = new Scanner(System.in);
+
         switch (tipo) {
             case "americano":
+                System.out.println("¿Cuantos cafes deseas?");
+                String num = entradanum.nextLine();
+                for (int i = 0; i <=num; i++) {
+
+                }
                 hacerAmericano();
                 System.out.println(toString());
                 break;
@@ -137,9 +146,13 @@ public class Cafetera {
                 System.out.println(toString());
                 break;
 
+            case "estado":
+                System.out.println(toString() + "\n");
+                break;
+
 
             default:
-                System.out.println("\nPorfavor solo escribe el nombre del cafe");
+                System.out.println("\nPorfavor solo escribe el nombre del cafe o " + "estado" + " para ver las cantidades de la maquina");
                 break;
 
 
